@@ -1,0 +1,30 @@
+name: apple_build_secrets
+version: 0.1.0
+description: >
+  Installable macOS skill pack for Codex, Claude, and generic model-driven
+  developer workflows.
+knowledge_root: knowledge/macos
+providers:
+  codex:
+    install_default: "${CODEX_HOME:-$HOME/.codex}/skills"
+    skills:
+      - apple-build-secrets-router
+      - macos-automation-launchd
+      - macos-ui-accessibility
+      - macos-screen-capture
+      - macos-observability
+      - macos-trust-policy
+  claude:
+    install_default: "${CLAUDE_SKILLS_DIR:-$HOME/.claude/skills}"
+    skills:
+      - apple-build-secrets-router
+      - macos-automation-launchd
+      - macos-ui-accessibility
+      - macos-screen-capture
+      - macos-observability
+      - macos-trust-policy
+  generic:
+    install_default: "./dist/apple-build-secrets-generic"
+    prompts:
+      - ROUTER_PROMPT.md
+      - APPLE_APP_DEVELOPER_PROMPT.md
