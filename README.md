@@ -16,7 +16,7 @@ The point is not “secret hacks for the sake of hacks.” The point is to help 
 Clone the repo, then install the provider layout you want:
 
 ```bash
-git clone <repo-url> apple_build_secrets
+git clone git@github.com:AmitSubhash/apple_build_secrets.git
 cd apple_build_secrets
 ./install.sh codex
 ```
